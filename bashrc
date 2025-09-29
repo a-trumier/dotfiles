@@ -26,8 +26,10 @@ fi
 unset rc
 alias :q=exit
 alias man=qman
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
-PS1='\n[ \w | ${PS1_CMD1} ] $ '
+PROMPT_COMMAND='\
+echo -ne "\033]0;$(whoami)@$(hostname):$(pwd)\007"'
+    
+PS1='\n[ \w ] $ '
 #PS1='\[\e[95m\]\s\[\e[0m\]'
 #PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
 #PS1='\n\[\e[95m\][ \s | \w | ${PS1_CMD1} ]\[\e[0m\]\n[ \u | \H | $? ] \$ '
