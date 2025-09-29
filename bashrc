@@ -27,7 +27,7 @@ unset rc
 alias :q=exit
 alias man=qman
 PROMPT_COMMAND='\
-echo -ne "\033]0;$(whoami)@$(hostname):$(pwd)\007"'
+echo -ne "\033]0;$(whoami)@$(hostname)\007"'
     
 PS1='\n[ \w ] $ '
 #PS1='\[\e[95m\]\s\[\e[0m\]'
