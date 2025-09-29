@@ -34,3 +34,6 @@ cp vimrc ~/.vimrc
 cp bashrc ~/.bashrc
 cp tmux.conf ~/.tmux.conf
 cp term_conf ~/.config/terminator/config
+cp Xresources ~/.Xresources
+
+xrdb -merge ~/.Xresources

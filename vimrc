@@ -50,6 +50,12 @@ autocmd VimEnter * highlight ColorColumn ctermbg=9 guibg=lightgrey
 " macros
 let @c = "i/*/€ý5kA €ý5"
 let @d = "i/* */€ý5hhi"
+if &term =~ "xterm"
+    let &t_Co = 256
+    let &t_Sf = "\<Esc>[3%p1%dm"
+    let &t_Sb = "\<Esc>[4%p1%dm"
+endif
+set term=xterm-256color
 " regular stuff below
 
 set nocompatible
