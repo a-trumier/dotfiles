@@ -1,6 +1,13 @@
 xterm*faceName: Monospace
 xterm*faceSize: 10
-xterm*background: Grey15
-xterm*foreground: white
 xterm*saveLines: 10000
 xterm*visualBell: false
+
+XTerm*cursorColor: white
+XTerm*foreground: white
+XTerm*background: Grey15
+XTerm*scrollBar: false
+
+XTerm*VT100.allowBoldFonts: true
+XTerm*boldMode: true
+xterm*selectToClipboard: true
