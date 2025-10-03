@@ -25,7 +25,6 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 alias :q=exit
-alias man=qman
     
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
 PS1='\n[ \w | ${PS1_CMD1} ] $ '
