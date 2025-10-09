@@ -29,8 +29,8 @@ call plug#end()
 filetype plugin indent on
 
 let base16colorspace=256
-colorscheme twilight256
-autocmd vimenter * colorscheme twilight256
+colorscheme PaperColor
+autocmd vimenter * colorscheme PaperColor
 let g:tagbar_width = winwidth(0) * 80/100
 
 let g:tabman_toggle = '<leader>mt'
@@ -46,7 +46,7 @@ let g:webdevicons_enable_nerdtree = 1
 set completeopt+=menuone
 
 set colorcolumn=80
-autocmd VimEnter * highlight ColorColumn ctermbg=9 guibg=lightgrey 
+autocmd VimEnter * highlight ColorColumn ctermbg=239 guibg=lightgrey 
 " macros
 let @c = "i/*/€ý5kA €ý5"
 let @d = "i/* */€ý5hhi"

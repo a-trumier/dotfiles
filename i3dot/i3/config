@@ -5,13 +5,13 @@ set $mod Mod1
 set $term xterm
 set $run_menu "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#2334E8' -sf '#EEEEEE' -fn 'monospace-10' -p 'run?' -b"
 
-set $base #898989
-set $low #000000
-set $alt #AA4F04
-set $text #FFFFFF
+set $base #ffffff
+set $low #e0e0e0
 set $black #000000
-set $darkish #0C0C0C
-set $white #FFFFFF
+set $text #000000
+set $alt #ffcc00
+set $darkish #cccccc
+set $white #ffffff
 
 # target                 title    bg       text   indicator   border
 client.focused           $base    $base    $black  $base       $base 
@@ -26,9 +26,10 @@ font pango:monospace 10
 
 default_floating_border normal
 default_border normal
-for_window [class="^.*"] border normal
+for_window [class="^.*"] border pixel 1
 
 exec --no-startup-id dex-autostart --autostart --environment i3
+exec --no-startuo-id nm-applet
 
 # sleep lock screen to i3 lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/sleep.sh  --nofork
@@ -158,11 +159,13 @@ bindsym $mod+r mode "resize"
 set $Locker i3lock --color 000000 && sleep 1
 
 #quick little lock system. does the job
-set $mode_system System (l) lock, (e) logout, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (h) hibernate, (s) sleep, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym r exec --no-startup-id loginctl poweroff reboot, mode "default"
+    bindsym h exec --no-startup-id $Locker && ZZZ, mode "default"
+    bindsym s exec --no-startup-id $Locker && zzz, mode "default"
+    bindsym r exec --no-startup-id loginctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id loginctl poweroff, mode "default"
 
     # back to normal: Enter or Escape
@@ -181,8 +184,8 @@ bar {
         position top
         status_command i3status
     colors {
-        background #000000
-        statusline #FFFFFF
+        background $low
+        statusline #000000
         separator  #666666
 
         focused_workspace  $base $base $black

@@ -2,10 +2,45 @@ xterm*faceName: Monospace
 xterm*faceSize: 10
 xterm*saveLines: 10000
 xterm*visualBell: false
+! Terminal colors
+*background: #FFFFFF
+*foreground: #000000
 
-XTerm*cursorColor: white
-XTerm*foreground: white
-XTerm*background: Grey15
+! Black
+*color0: #000000
+*color8: #A0A0A0
+
+! Red
+*color1: #FF0000
+*color9: #FF6666
+
+! Green
+*color2: #00FF00
+*color10: #66FF66
+
+! Yellow
+*color3: #FFFF00
+*color11: #FFFF66
+
+! Blue
+*color4: #0000FF
+*color12: #6666FF
+
+! Magenta
+*color5: #FF00FF
+*color13: #FF66FF
+
+! Cyan
+*color6: #00FFFF
+*color14: #66FFFF
+
+! White
+*color7: #FFFFFF
+*color15: #E0E0E0
+
+! Cursor color
+*cursorColor: #000000
+
 XTerm*scrollBar: false
 
 XTerm*VT100.allowBoldFonts: true
