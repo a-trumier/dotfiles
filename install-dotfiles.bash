@@ -33,8 +33,8 @@ cp i3dot/i3status/* ~/.config/i3status/
 cp vimrc ~/.vimrc
 cp bashrc ~/.bashrc
 cp tmux.conf ~/.tmux.conf
-cp term_conf ~/.config/terminator/config
 cp Xresources ~/.Xresources
 cp zshrc ~/.zshrc
+cp asoundrc ~/.asoundrc
 
 xrdb -merge ~/.Xresources
