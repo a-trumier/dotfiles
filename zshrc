@@ -1,5 +1,14 @@
-# Created by newuser for 5.9
-
+# Created by newuser for 5.9function git_branch_name()
+function parse_git_branch()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo $branch
+  fi
+}
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
@@ -20,8 +29,9 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+setopt prompt_subst
 NEWLINE=$'\n'
-PROMPT="${NEWLINE}[ %~ ] "
+PROMPT="${NEWLINE}[ %~ | $(parse_git_branch) ] "
 RPROMPT="%M"
 export TERM=xterm-256color
 
