@@ -36,3 +36,4 @@ cp ~/.tmux.conf tmux.conf
 cp ~/.Xresources Xresources
 cp ~/.zshrc zshrc
 cp ~/.asoundrc asoundrc
+cp ~/.config/qman/qman.conf qman.conf

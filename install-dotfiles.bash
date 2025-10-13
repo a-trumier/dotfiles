@@ -28,6 +28,10 @@ then
     exit 1
 fi
 
+mkdir -p .config/i3
+mkdir -p .config/i3status
+mkdir -p .config/qman
+
 cp i3dot/i3/* ~/.config/i3/
 cp i3dot/i3status/* ~/.config/i3status/ 
 cp vimrc ~/.vimrc
@@ -36,5 +40,6 @@ cp tmux.conf ~/.tmux.conf
 cp Xresources ~/.Xresources
 cp zshrc ~/.zshrc
 cp asoundrc ~/.asoundrc
+cp qman.conf ~/.config/qman/
 
 xrdb -merge ~/.Xresources
