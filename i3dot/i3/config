@@ -22,7 +22,7 @@ client.placeholder       $black   $darkish $text  $black      $darkish
 client.background        $white
 
 # window title font
-font pango:SauceCodePro 10
+font pango:Sauce Code Pro Nerd Font 10
 
 default_floating_border normal
 default_border normal
