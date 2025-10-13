@@ -3,7 +3,7 @@
 set $mod Mod1
 
 set $term xterm
-set $run_menu "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#2334E8' -sf '#EEEEEE' -fn 'monospace-10' -p 'run?' -b"
+set $run_menu "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#2334E8' -sf '#EEEEEE' -fn 'SauceCodePro-10' -p 'run?' -b"
 
 set $base #898989
 set $low #000000
@@ -22,11 +22,11 @@ client.placeholder       $black   $darkish $text  $black      $darkish
 client.background        $white
 
 # window title font
-font pango:monospace 10
+font pango:SauceCodePro 10
 
 default_floating_border normal
 default_border normal
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border normal
 
 exec --no-startup-id dex-autostart --autostart --environment i3
 

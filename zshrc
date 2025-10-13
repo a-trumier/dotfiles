@@ -20,8 +20,8 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-
-PROMPT="[ %~ ] "
+NEWLINE=$'\n'
+PROMPT="${NEWLINE}[ %~ ] "
 RPROMPT="%M"
 export TERM=xterm-256color
 
