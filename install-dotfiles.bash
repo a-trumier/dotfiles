@@ -31,6 +31,7 @@ fi
 mkdir -p .config/i3
 mkdir -p .config/i3status
 mkdir -p .config/qman
+mkdir -p .local/share/fonts/
 
 cp i3dot/i3/* ~/.config/i3/
 cp i3dot/i3status/* ~/.config/i3status/ 
@@ -41,5 +42,6 @@ cp Xresources ~/.Xresources
 cp zshrc ~/.zshrc
 cp asoundrc ~/.asoundrc
 cp qman.conf ~/.config/qman/
+cp -r fonts ~/.local/share/fonts
 
 xrdb -merge ~/.Xresources
