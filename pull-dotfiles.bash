@@ -35,3 +35,4 @@ cp ~/.bashrc bashrc
 cp ~/.tmux.conf tmux.conf
 cp ~/.config/terminator/config term_conf
 cp ~/.Xresources Xresources
+cp ~/.zshrc zshrc
