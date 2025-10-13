@@ -27,6 +27,7 @@ export TERM=xterm-256color
 
 EDITOR=/usr/bin/vim
 alias :q=exit
+alias man=qman
 
 alias cls="clear; ls"
 alias l="ls -CF"
