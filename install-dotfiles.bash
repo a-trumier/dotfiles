@@ -12,6 +12,8 @@ then
     exit 1
 fi
 
+cd $GIT_TOPLEVEL
+
 GIT_ORIG_URL=$(git remote get-url origin)
 if [ $? -ne 0 ]
 then
@@ -28,10 +30,10 @@ then
     exit 1
 fi
 
-mkdir -p .config/i3
-mkdir -p .config/i3status
-mkdir -p .config/qman
-mkdir -p .local/share/fonts/
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status
+mkdir -p ~/.config/qman
+mkdir -p ~/.local/share/fonts/
 
 cp i3dot/i3/* ~/.config/i3/
 cp i3dot/i3status/* ~/.config/i3status/ 
