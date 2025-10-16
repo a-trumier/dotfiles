@@ -25,7 +25,6 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 alias :q=exit
-alias man=qman
     
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
 PS1='\n[ \w | ${PS1_CMD1} ] $ '
@@ -38,4 +37,8 @@ alias cls="clear; ls"
 alias l="ls -CF"
 alias ls="ls --color=auto"
 alias clean="make clean"
-echo -ne "\033]0;$(whoami)@$(hostname)\007"
+
+if [[ $- == *i* ]]
+then
+    exec /bin/zsh
+fi

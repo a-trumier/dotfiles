@@ -1,5 +1,14 @@
-# Created by newuser for 5.9
-
+# Created by newuser for 5.9function git_branch_name()
+function parse_git_branch()
+{
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo $branch
+  fi
+}
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
@@ -20,17 +29,23 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+setopt prompt_subst
 NEWLINE=$'\n'
-PROMPT="${NEWLINE}[ %~ ] "
+PROMPT='${NEWLINE}[ %~ | $(parse_git_branch) ] '
 RPROMPT="%M"
 export TERM=xterm-256color
 
 EDITOR=/usr/bin/vim
 alias :q=exit
+alias man=qman
 
 alias cls="clear; ls"
 alias l="ls -CF"
 alias ls="ls --color=auto"
 alias clean="make clean"
-echo -ne "\033]0;$(whoami)@$(hostname)\007"
+
+if [[ $- == *i* ]]
+then
+    echo -ne "\033]0;$(whoami)@$(hostname)\007"
+fi
 
