@@ -28,13 +28,21 @@ then
     exit 1
 fi
 
+mkdir -p ~/.config/alacritty
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status
+mkdir -p ~/.mutt
+
 cp i3dot/i3/* ~/.config/i3/
 cp i3dot/i3status/* ~/.config/i3status/ 
 cp vimrc ~/.vimrc
 cp bashrc ~/.bashrc
 cp tmux.conf ~/.tmux.conf
-cp term_conf ~/.config/terminator/config
 cp Xresources ~/.Xresources
 cp zshrc ~/.zshrc
+cp alacritty.toml ~/.config/alacritty/alacritty.toml
+cp muttrc ~/.muttrc
+cp creds.gpg ~/.mutt
+cp purify.muttrc ~/.mutt
 
 xrdb -merge ~/.Xresources

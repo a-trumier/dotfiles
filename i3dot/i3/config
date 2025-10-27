@@ -6,7 +6,7 @@ set $term xterm
 set $run_menu "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#2334E8' -sf '#EEEEEE' -fn 'Sauce Code Pro Nerd Font-10' -p 'run?' -b"
 
 set $base #898989
-set $low #000000
+set $low #222222
 set $alt #AA4F04
 set $text #FFFFFF
 set $black #000000
@@ -35,6 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/sleep.sh  --
 
 # network manager
 exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
 exec --no-startup-id feh --no-fehbg --bg-scale '/home/alex/.config/i3/bg.jpg'
 
 # no touchy, this is pulseaudio stuff
@@ -142,10 +143,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 1 px or 1 ppt
-        bindsym j resize grow height 1 px or 1 ppt
-        bindsym k resize shrink height 1 px or 1 ppt
-        bindsym l resize grow width 1 px or 1 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -181,7 +182,7 @@ bar {
         position top
         status_command i3status
     colors {
-        background #000000
+        background #222222
         statusline #FFFFFF
         separator  #666666
 

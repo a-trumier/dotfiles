@@ -33,6 +33,9 @@ cp ~/.config/i3status/* i3dot/i3status
 cp ~/.vimrc vimrc
 cp ~/.bashrc bashrc
 cp ~/.tmux.conf tmux.conf
-cp ~/.config/terminator/config term_conf
 cp ~/.Xresources Xresources
 cp ~/.zshrc zshrc
+cp ~/.config/alacritty/alacritty.toml .
+cp ~/.muttrc muttrc
+cp ~/.mutt/creds.gpg .
+cp ~/.mutt/purify.muttrc .
