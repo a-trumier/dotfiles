@@ -39,3 +39,4 @@ cp ~/.config/alacritty/alacritty.toml .
 cp ~/.muttrc muttrc
 cp ~/.mutt/creds.gpg .
 cp ~/.mutt/purify.muttrc .
+cp ~/.config/kitty/kitty.conf .

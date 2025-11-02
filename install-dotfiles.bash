@@ -32,6 +32,7 @@ mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
 mkdir -p ~/.mutt
+mkdir -p ~/.config/kitty
 
 cp i3dot/i3/* ~/.config/i3/
 cp i3dot/i3status/* ~/.config/i3status/ 
@@ -44,5 +45,6 @@ cp alacritty.toml ~/.config/alacritty/alacritty.toml
 cp muttrc ~/.muttrc
 cp creds.gpg ~/.mutt
 cp purify.muttrc ~/.mutt
+cp kitty.conf ~/.config/kitty
 
 xrdb -merge ~/.Xresources

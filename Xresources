@@ -1,4 +1,4 @@
-xterm*faceName: Sauce Code Pro Nerd Font
+xterm*faceName: GeistMono Nerd Font
 xterm*faceSize: 10
 xterm*saveLines: 10000
 xterm*visualBell: false
@@ -11,6 +11,10 @@ XTerm*scrollBar: false
 XTerm*VT100.allowBoldFonts: true
 XTerm*boldMode: true
 xterm*selectToClipboard: true
+
+Xft.dpi: 90
+Xcursor.theme: Bibata-Original-Ice
+Xcursor.size: 10
 
 XTerm*VT100.Translations: #override \
     Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n \
