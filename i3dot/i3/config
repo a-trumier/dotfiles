@@ -2,7 +2,7 @@
 
 set $mod Mod1
 
-set $term xterm
+set $term kitty
 set $run_menu "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#2334E8' -sf '#EEEEEE' -fn 'GeistMono Nerd Font-10' -p 'run?' -b"
 
 set $base #898989
