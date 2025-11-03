@@ -36,6 +36,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/sleep.sh  --
 # network manager
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
+exec --no-startup-id picom -c --backend glx
 exec --no-startup-id feh --no-fehbg --bg-scale '/home/alex/.config/i3/bg.jpg'
 exec --no-startup-id xrdb -merge ~/.Xresources
 
