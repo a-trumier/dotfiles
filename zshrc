@@ -43,9 +43,12 @@ alias cls="clear; ls"
 alias l="ls -CF"
 alias ls="ls --color=auto"
 alias clean="make clean"
+alias pd="popd"
+alias cd="pushd"
+alias dirs="dirs -p"
+alias vi="vim"
 
 if [[ $- == *i* ]]
 then
     echo -ne "\033]0;$(whoami)@$(hostname)\007"
 fi
-

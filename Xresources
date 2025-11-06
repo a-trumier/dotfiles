@@ -14,7 +14,7 @@ xterm*selectToClipboard: true
 
 Xft.dpi: 90
 Xcursor.theme: Bibata-Original-Ice
-Xcursor.size: 10
+Xcursor.size: 20
 
 XTerm*VT100.Translations: #override \
     Shift Ctrl<Key>V: insert-selection(CLIPBOARD) \n \
