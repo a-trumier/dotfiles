@@ -1,8 +1,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
-set $term kitty
+set $term st
 set $run_menu "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#2334E8' -sf '#EEEEEE' -fn 'GeistMono Nerd Font-10' -p 'run?' -b"
 
 set $base #898989
@@ -39,6 +39,7 @@ exec --no-startup-id pa-applet
 exec --no-startup-id picom -c --backend glx
 exec --no-startup-id feh --no-fehbg --bg-scale '/home/alex/.config/i3/bg.jpg'
 exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id setxkbmap -option altwin:swap_alt_win
 
 
 # no touchy, this is pulseaudio stuff
