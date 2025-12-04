@@ -48,7 +48,6 @@ alias cd="pushd"
 alias dirs="dirs -p"
 alias vi="vim"
 
-if [[ $- == *i* ]]
-then
+precmd() {   
     echo -ne "\033]0;$(whoami)@$(hostname)\007"
-fi
+}
